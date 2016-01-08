@@ -1,0 +1,2 @@
+docker run -d -P --name spark_server -v $1:/sshusers chenning84/sparkssh
+ 
