@@ -9,4 +9,9 @@ fi
 /scripts/add_users.sh
 
 # Start the ssh daemon
-exec /usr/sbin/sshd -D
+#exec /usr/sbin/sshd -D
+
+
+service ssh restart && bash
+
+exec su - spark

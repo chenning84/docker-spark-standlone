@@ -10,7 +10,8 @@ fi
 user=$1
 
 # Generate random password
-pass=$(pwgen -s 12 1)
+#pass=$(pwgen -s 12 1)
+pass="temp123"
 
 # Set the password
 echo "=> Setting a random password for the user \"$user\""

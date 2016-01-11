@@ -8,10 +8,10 @@ handle_user()
 	file="$3"
 
 	# Add the user
-	useradd -m -s /bin/bash "$user"
+	useradd   -m -s /bin/bash "$user"
 
 	# Include the user in groups
-	usermod -a -G "$grps" "$user"
+	usermod -a -G  "$grps" "$user"
 
 	# Get the public key
 	pubkey=$(cat "$file")

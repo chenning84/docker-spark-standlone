@@ -17,9 +17,9 @@ RUN mkdir -p /scripts
 RUN groupadd sshusers
 
 # Harden sshd configuration
-RUN sed -i "s/PermitRootLogin.*/PermitRootLogin no/g" /etc/ssh/sshd_config
-RUN sed -i "s/PubkeyAuthentication.*/PubkeyAuthentication yes/g" /etc/ssh/sshd_config
-RUN sed -i "s/PermitEmptyPasswords.*/PermitEmptyPasswords no/g" /etc/ssh/sshd_config
+RUN sed -i "s/PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config
+RUN sed -i "s/PubkeyAuthentication.*/PubkeyAuthentication no/g" /etc/ssh/sshd_config
+RUN sed -i "s/PermitEmptyPasswords.*/PermitEmptyPasswords yes/g" /etc/ssh/sshd_config
 RUN sed -i "s/PasswordAuthentication.*/PasswordAuthentication no/g" /etc/ssh/sshd_config
 RUN echo "AllowGroups sshusers" >> /etc/ssh/sshd_config
 
@@ -37,4 +37,5 @@ RUN chmod -Rf 750 /scripts
 EXPOSE 22
 
 # Run the initial script
+#ENTRYPOINT service ssh restart && bash
 CMD ["/scripts/run.sh"]
