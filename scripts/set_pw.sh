@@ -11,7 +11,9 @@ user=$1
 
 # Generate random password
 #pass=$(pwgen -s 12 1)
-pass="temp123"
+# Generate password if not set by environment variable
+pass=${ROOT_PASS:-$(pwgen -s 12 1)}
+_word=$( [ "${ROOT_PASS}" ] && echo "preset" || echo "random" )
 
 # Set the password
 echo "=> Setting a random password for the user \"$user\""

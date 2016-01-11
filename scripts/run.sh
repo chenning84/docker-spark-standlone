@@ -14,4 +14,4 @@ fi
 
 service ssh restart && bash
 
-exec su - spark
+#exec su - spark

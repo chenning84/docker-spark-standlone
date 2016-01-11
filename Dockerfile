@@ -18,6 +18,7 @@ RUN groupadd sshusers
 
 # Harden sshd configuration
 RUN sed -i "s/PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config
+RUN sed -i "s/HostbasedAuthentication.*/HostbasedAuthentication yes/g" /etc/ssh/sshd_config
 RUN sed -i "s/PubkeyAuthentication.*/PubkeyAuthentication no/g" /etc/ssh/sshd_config
 RUN sed -i "s/PermitEmptyPasswords.*/PermitEmptyPasswords yes/g" /etc/ssh/sshd_config
 RUN sed -i "s/PasswordAuthentication.*/PasswordAuthentication no/g" /etc/ssh/sshd_config
