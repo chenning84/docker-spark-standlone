@@ -1,0 +1,7 @@
+Build image
+
+
+1) run run.sh
+a) created users from /users directory
+b) add sudoers from suders
+c) change owner for spark install directory

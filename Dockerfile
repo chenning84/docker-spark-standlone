@@ -12,6 +12,7 @@ RUN apt-get -y install openssh-server pwgen
 RUN mkdir -p /var/run/sshd
 RUN mkdir -p /sshusers
 RUN mkdir -p /scripts
+RUN mkdir -p /scripts
 
 # Create sshusers group
 RUN groupadd sshusers

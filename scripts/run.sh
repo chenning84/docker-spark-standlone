@@ -12,6 +12,7 @@ fi
 #exec /usr/sbin/sshd -D
 owner=${SPARK_OWNER}
 chown -R "$owner":"$owner" /spark-1.5.2-bin-hadoop2.6
+chown -R "$owner":"$owner" /spark_config
 
 service ssh restart && bash
 

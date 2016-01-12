@@ -1,1 +1,0 @@
- docker run -d -P -e ROOT_PASS="temp123" --name some_sshd -v ~/code/docker/docker-spark-standlone/users:/sshusers chenning84/sparkssh
