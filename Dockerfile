@@ -12,7 +12,7 @@ RUN apt-get -y install openssh-server pwgen
 RUN mkdir -p /var/run/sshd
 RUN mkdir -p /sshusers
 RUN mkdir -p /scripts
-RUN mkdir -p /scripts
+RUN mkdir -p /spark_config
 
 # Create sshusers group
 RUN groupadd sshusers
@@ -30,6 +30,8 @@ ADD scripts/run.sh /scripts/run.sh
 ADD scripts/add_users.sh /scripts/add_users.sh
 ADD scripts/set_pw.sh /scripts/set_pw.sh
 ADD scripts/set_pw_root.sh /scripts/set_pw_root.sh
+ADD config/slaves /spark-1.5.2-bin-hadoop2.6/conf/slaves
+ADD config/spark-env.sh /spark-1.5.2-bin-hadoop2.6/conf/spark-env.sh
 
 # Change permissions on scripts
 RUN chown -Rf root:root /scripts
