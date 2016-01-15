@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # Install packages
 RUN apt-get update
 RUN apt-get -y install openssh-server pwgen
-
+RUN apt-get -y install usbutils
 # Prepare directories
 RUN mkdir -p /var/run/sshd
 RUN mkdir -p /sshusers
