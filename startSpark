@@ -1,4 +1,0 @@
-ssh $2@172.17.0.1 'sshpass -p "$1" ssh-copy-id -o StrictHostKeyChecking=no $2@172.17.0.1'
-#ssh $2@172.17.0.1 'sshpass -p "$1" ssh-copy-id -o StrictHostKeyChecking=no $2@172.17.0.2'
-#ssh $2@172.17.0.1 'ssshpass -p "$1" ssh-copy-id -o StrictHostKeyChecking=no $2@172.17.0.3'
-
