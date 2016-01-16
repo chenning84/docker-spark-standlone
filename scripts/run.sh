@@ -23,6 +23,7 @@ cp /ssh_config/known_hosts /home/"$owner"/.ssh/known_hosts
 chown -R "$owner":"$owner"  /home/"$owner"/.ssh
 su - $owner -c 'ssh-keygen -f .ssh/id_rsa -t rsa -N ""'
 su - $owner -c 'cat .ssh/id_rsa.pub >> .ssh/authorized_keys'
-service ssh restart && bash
-
+#service ssh restart && bash
+#exec service ssh restart
+exec /usr/sbin/sshd -D
 #exec su - spark
