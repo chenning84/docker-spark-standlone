@@ -11,3 +11,9 @@ Base on my observation it's achieved when I used 1.9.1 client
 
 /config/slaves has the list of ipaddress that would be associated with started docker instances .
 /config/spark-env.sh need to change the master node you would like to use for the master node of spark
+
+
+
+to start all docker instances
+
+ ./startDockers.sh temp123 ning ~/docker/docker-spark-standlone/

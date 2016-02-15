@@ -5,3 +5,12 @@ Build image
 a) created users from /users directory
 b) add sudoers from suders
 c) change owner for spark install directory
+
+https://hub.docker.com/r/codetroopers/jenkins-slave-jdk8-android/~/dockerfile/
+
+Docker used to adduser
+https://hub.docker.com/r/evarga/jenkins-slave/~/dockerfile/
+
+
+Install Kafka
+https://www.digitalocean.com/community/tutorials/how-to-install-apache-kafka-on-ubuntu-14-04
